@@ -1,0 +1,31 @@
+name: Release DLC
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 打包 DLC zip
+        run: |
+          for d in DLC*/; do
+            name=$(basename "$d")
+            zip -r "${name}.zip" "$d"
+          done
+          ls -la *.zip
+
+      - name: 上传 Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "DLC*.zip"
+          generate_release_notes: true
+          overwrite: true
