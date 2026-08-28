@@ -15,12 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 打包 DLC zip
+      - name: 打包 DLC zip（Python，避免中文名被 shell 破坏）
+        shell: bash
         run: |
-          for d in DLC*/; do
-            name=$(basename "$d")
-            zip -r "${name}.zip" "$d"
-          done
+          python3 - <<'EOF'
+          import os, zipfile
+          for name in sorted(os.listdir('.')):
+              if not (os.path.isdir(name) and name.startswith('DLC')):
+                  continue
+              out = name + '.zip'
+              with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+                  for root, dirs, files in os.walk(name):
+                      for f in files:
+                          p = os.path.join(root, f)
+                          z.write(p, p)
+              print('packed:', out, os.path.getsize(out))
+          EOF
           ls -la *.zip
 
       - name: 上传 Release
