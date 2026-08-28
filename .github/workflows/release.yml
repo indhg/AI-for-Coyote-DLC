@@ -26,17 +26,21 @@ jobs:
           import subprocess
           names = subprocess.run(['git', 'ls-tree', '--name-only', 'HEAD'],
                                  capture_output=True, text=True).stdout.splitlines()
+          diag = []
+          diag.append('ls-tree names: ' + repr(names))
+          diag.append('cwd: ' + repr(subprocess.run(['ls','-la'],capture_output=True,text=True).stdout))
           for d in names:
               if d.startswith('DLC') and '/' not in d:
                   out = d + '.zip'
                   subprocess.run(['git', 'archive', '--format=zip', '-o', out, 'HEAD', d], check=True)
-                  print('packed:', out)
+                  diag.append('packed: ' + repr(out))
+          diag.append('zip files: ' + repr(subprocess.run(['ls','-la','*.zip'],capture_output=True,text=True,shell=True).stdout))
+          open('notes.txt','w',encoding='utf-8').write('\n'.join(diag))
           EOF
-          ls -la *.zip
 
       - name: 创建 Release 并上传（gh CLI，保留 UTF-8 文件名）
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${{ github.ref_name }}" DLC*.zip --generate-notes --latest \
+          gh release create "${{ github.ref_name }}" DLC*.zip --notes-file notes.txt --latest \
             || gh release upload "${{ github.ref_name }}" DLC*.zip --clobber
