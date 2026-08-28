@@ -2,6 +2,15 @@
 
 > ⚠️ 成人内容（18+）：本仓库包含露骨的成人虚构文本，仅供成年人、双方自愿的虚构角色扮演使用。请遵守所在地区法律。
 
+## 📦 相关仓库（重要）
+
+本仓库是 **DLC 拓展仓库**（未来新角色/新风格的拓展内容都放这里），配套主仓库：
+
+| 仓库 | 地址 | 说明 |
+|---|---|---|
+| 🖥️ **PC 主仓库** | [indhg/AI-for-Coyote](https://github.com/indhg/AI-for-Coyote) | 桌面控制台版（纯爱版本体 + 网页控制台） |
+| 📱 **安卓端** | [indhg/Coyote-in-Cradle-Android](https://github.com/indhg/Coyote-in-Cradle-Android) | 纯安卓零电脑依赖版（BLE 直连郊狼；支持导入本仓库 .md 启用拓展） |
+
 ## 目录规范
 
 每个 DLC 一个子目录，命名 `DLC<序号>-<名称>`，文件用「角色名-」前缀：
