@@ -38,9 +38,40 @@ jobs:
           open('notes.txt','w',encoding='utf-8').write('\n'.join(diag))
           EOF
 
-      - name: 创建 Release 并上传（gh CLI，保留 UTF-8 文件名）
+      - name: 创建 Release 并上传（python urllib，保 UTF-8 文件名）
         env:
           GH_TOKEN: ${{ github.token }}
+        shell: bash
         run: |
-          gh release create "${{ github.ref_name }}" DLC*.zip --notes-file notes.txt --latest \
-            || gh release upload "${{ github.ref_name }}" DLC*.zip --clobber
+          python3 - <<'EOF'
+          import json, os, urllib.error, urllib.parse, urllib.request
+          token = os.environ['GH_TOKEN']
+          tag = os.environ['GITHUB_REF_NAME']
+          repo = 'indhg/AI-for-Coyote-DLC'
+          h = {'Authorization': 'token ' + token, 'User-Agent': 'ci',
+               'Accept': 'application/vnd.github+json'}
+          def api(method, url, data=None, ctype=None):
+              hh = dict(h)
+              if ctype:
+                  hh['Content-Type'] = ctype
+              req = urllib.request.Request(url, data=data, headers=hh, method=method)
+              return urllib.request.urlopen(req)
+          try:
+              body = json.dumps({'tag_name': tag, 'name': tag}).encode()
+              rel = json.loads(api('POST', f'https://api.github.com/repos/{repo}/releases',
+                                   body, 'application/json').read())
+          except urllib.error.HTTPError as e:
+              if e.code == 422:
+                  rel = json.loads(api('GET', f'https://api.github.com/repos/{repo}/releases/tags/{tag}').read())
+              else:
+                  raise
+          for f in sorted(os.listdir('.')):
+              if f.startswith('DLC') and f.endswith('.zip'):
+                  name = urllib.parse.quote(f)
+                  url = f'https://uploads.github.com/repos/{repo}/releases/{rel["id"]}/assets?name={name}'
+                  try:
+                      with api('POST', url, open(f, 'rb').read(), 'application/zip') as r:
+                          print('uploaded:', f, r.status)
+                  except urllib.error.HTTPError as e:
+                      print('skip (asset exists?):', f, e.code)
+          EOF
