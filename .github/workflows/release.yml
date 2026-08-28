@@ -18,21 +18,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 打包 DLC zip（Python，避免中文名被 shell 破坏）
+      - name: 打包 DLC zip（git archive，绕开 checkout 中文名破坏）
         shell: bash
         run: |
+          git config --global core.quotepath false
           python3 - <<'EOF'
-          import os, zipfile
-          for name in sorted(os.listdir('.')):
-              if not (os.path.isdir(name) and name.startswith('DLC')):
-                  continue
-              out = name + '.zip'
-              with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
-                  for root, dirs, files in os.walk(name):
-                      for f in files:
-                          p = os.path.join(root, f)
-                          z.write(p, p)
-              print('packed:', out, os.path.getsize(out))
+          import subprocess
+          names = subprocess.run(['git', 'ls-tree', '--name-only', 'HEAD'],
+                                 capture_output=True, text=True).stdout.splitlines()
+          for d in names:
+              if d.startswith('DLC') and '/' not in d:
+                  out = d + '.zip'
+                  subprocess.run(['git', 'archive', '--format=zip', '-o', out, 'HEAD', d], check=True)
+                  print('packed:', out)
           EOF
           ls -la *.zip
 
