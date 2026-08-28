@@ -65,13 +65,18 @@ jobs:
                   rel = json.loads(api('GET', f'https://api.github.com/repos/{repo}/releases/tags/{tag}').read())
               else:
                   raise
+          diag = ['listdir: ' + repr(sorted(os.listdir('.')))]
           for f in sorted(os.listdir('.')):
               if f.startswith('DLC') and f.endswith('.zip'):
                   name = urllib.parse.quote(f)
                   url = f'https://uploads.github.com/repos/{repo}/releases/{rel["id"]}/assets?name={name}'
                   try:
                       with api('POST', url, open(f, 'rb').read(), 'application/zip') as r:
-                          print('uploaded:', f, r.status)
+                          resp = json.loads(r.read())
+                          diag.append('upload ok: ' + repr(f) + ' -> server name: ' + repr(resp.get('name')))
                   except urllib.error.HTTPError as e:
-                      print('skip (asset exists?):', f, e.code)
+                      diag.append('skip (asset exists?): ' + repr(f) + ' code ' + str(e.code))
+          patch = json.dumps({'body': '\n'.join(diag)}).encode()
+          api('PATCH', f'https://api.github.com/repos/{repo}/releases/{rel["id"]}',
+              patch, 'application/json')
           EOF
