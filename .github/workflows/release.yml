@@ -18,7 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 打包 DLC zip（git archive，绕开 checkout 中文名破坏）
+      # 外层 zip 用 ASCII 名（GitHub 上传接口会把非 ASCII 资产名替换成点）；
+      # 内部用 git archive 保留原始中文目录/文件名
+      - name: 打包 DLC zip
         shell: bash
         run: |
           git config --global core.quotepath false
@@ -26,19 +28,14 @@ jobs:
           import subprocess
           names = subprocess.run(['git', 'ls-tree', '--name-only', 'HEAD'],
                                  capture_output=True, text=True).stdout.splitlines()
-          diag = []
-          diag.append('ls-tree names: ' + repr(names))
-          diag.append('cwd: ' + repr(subprocess.run(['ls','-la'],capture_output=True,text=True).stdout))
-          for d in names:
-              if d.startswith('DLC') and '/' not in d:
-                  out = d + '.zip'
-                  subprocess.run(['git', 'archive', '--format=zip', '-o', out, 'HEAD', d], check=True)
-                  diag.append('packed: ' + repr(out))
-          diag.append('zip files: ' + repr(subprocess.run(['ls','-la','*.zip'],capture_output=True,text=True,shell=True).stdout))
-          open('notes.txt','w',encoding='utf-8').write('\n'.join(diag))
+          for i, d in enumerate(n for n in names if n.startswith('DLC') and '/' not in n):
+              out = f'Coyote-in-Cradle-DLC{i + 1}.zip'
+              subprocess.run(['git', 'archive', '--format=zip', '-o', out, 'HEAD', d], check=True)
+              print('packed:', out)
           EOF
+          ls -la *.zip
 
-      - name: 创建 Release 并上传（python urllib，保 UTF-8 文件名）
+      - name: 创建 Release 并上传
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -65,18 +62,13 @@ jobs:
                   rel = json.loads(api('GET', f'https://api.github.com/repos/{repo}/releases/tags/{tag}').read())
               else:
                   raise
-          diag = ['listdir: ' + repr(sorted(os.listdir('.')))]
           for f in sorted(os.listdir('.')):
-              if f.startswith('DLC') and f.endswith('.zip'):
+              if f.endswith('.zip'):
                   name = urllib.parse.quote(f)
                   url = f'https://uploads.github.com/repos/{repo}/releases/{rel["id"]}/assets?name={name}'
                   try:
                       with api('POST', url, open(f, 'rb').read(), 'application/zip') as r:
-                          resp = json.loads(r.read())
-                          diag.append('upload ok: ' + repr(f) + ' -> server name: ' + repr(resp.get('name')))
+                          print('uploaded:', f)
                   except urllib.error.HTTPError as e:
-                      diag.append('skip (asset exists?): ' + repr(f) + ' code ' + str(e.code))
-          patch = json.dumps({'body': '\n'.join(diag)}).encode()
-          api('PATCH', f'https://api.github.com/repos/{repo}/releases/{rel["id"]}',
-              patch, 'application/json')
+                      print('skip (asset exists?):', f, e.code)
           EOF
