@@ -20,19 +20,17 @@
 
 ## 安装
 
-### 🖥️ PC 桌面版
+### 🖥️ PC 桌面版（推荐：程序内一键导入）
 
-1. 先装主程序：到 [主仓库 Release](https://github.com/indhg/AI-for-Coyote/releases/latest) 下载安装（`Coyote-in-Cradle-setup-*.exe` ，或免装 zip 解压即用）；
-2. 到本仓库 [Release](https://github.com/indhg/AI-for-Coyote-DLC/releases/latest) 下载 `Coyote-in-Cradle-DLC1.zip`；
-3. 解压出 `DLC1-触手-调教版` 整个目录，放进主程序目录的 `content\pack\` 下（最终路径：`content\pack\DLC1-触手-调教版\触手-角色提示词-调教.md`）；
-4. 打开 `config\character.yaml`，在 `profiles:` 的 `调教:` 下取消注释并指向：
+1. 到本仓库 [Release](https://github.com/indhg/AI-for-Coyote-DLC/releases/latest) 下载 `Coyote-in-Cradle-DLC1.zip`；
+2. 打开主程序 → 窗口左侧「角色设置」→「导入 DLC」→ 选刚下载的 zip；
+3. 导入完成即自动启用，切「调教」就能用——不用动文件、不用重启。
 
-   ```yaml
-   调教:
-     prompt_file: content/pack/DLC1-触手-调教版/触手-角色提示词-调教.md
-   ```
-
-5. 重启主程序，侧边栏切「调教」即用；没装好的 DLC 会显示「未装DLC」并被切换拦截。
+> 手动方式（备用）：解压出 `DLC1-触手-调教版` 目录放进主程序 `content\pack\`，再在 `config\character.yaml` 的 `调教:` 段启用：
+> ```yaml
+> 调教:
+>   prompt_file: content/pack/DLC1-触手-调教版/触手-角色提示词-调教.md
+> ```
 
 ### 📱 安卓 App
 
