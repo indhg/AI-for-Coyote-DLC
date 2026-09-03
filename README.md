@@ -43,6 +43,17 @@
 
 ## 🧩 内容清单
 
+> 📁 **仓库结构**：仓库根为说明与许可；`releases/` 目录存放当前分发包（与下方 GitHub Releases 资产同一文件，二选一下载即可）。
+
+```
+AI-for-Coyote-DLC/
+├── README.md                     本说明
+├── LICENSE                       许可（可分享 · 禁商用）
+└── releases/
+    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   5 正式角色中文稿（= DLC-zh v0.4.1）
+    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   5 正式角色英文稿（= DLC-en v0.4.0）
+```
+
 主程序 **v1.1.6+ 已内置**纯爱体验版（触手 · 纯爱向，中英双语，开箱即玩），**无需安装本仓库任何内容**。
 
 本仓库提供的是 **5 个正式角色稿（R18）**，安装到程序目录后生成：
@@ -117,6 +128,17 @@ Main app (does not include this repo's content):
 | 📱 **Android** | 👉 <https://github.com/indhg/Coyote-in-Cradle-Android/releases/latest> |
 
 ## 🧩 Content
+
+> 📁 **Repo layout**: the repo root holds docs & license only; the `releases/` folder holds the current packs (same files as the GitHub Releases assets below — grab them from either place).
+
+```
+AI-for-Coyote-DLC/
+├── README.md                     This file
+├── LICENSE                       License (Free-Share, Non-Commercial)
+└── releases/
+    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   5 official roles, Chinese (= DLC-zh v0.4.1)
+    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   5 official roles, English (= DLC-en v0.4.0)
+```
 
 The main app **v1.1.6+ ships the Trial version built in**（Tentacle pure-love sample, ZH + EN, ready to play）— nothing from this repo is required to start.
 
