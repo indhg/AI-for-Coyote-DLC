@@ -28,8 +28,8 @@
 
 | 内容 | 下载 | 说明 |
 |---|---|---|
-| 🧩 **DLC-zh**（5 正式角色中文稿） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | 主程序 v1.1.6+；程序内「内容 / 语言包」一键导入 |
-| 🧩 **DLC-en**（5 正式角色英文稿） | 👉 [v0.4.0](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.0) | 同上（需先装 DLC-zh 或用英文界面切换） |
+| 🧩 **DLC-zh**（触手 / 品评会 中文稿） | 👉 [v0.4.2](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.2) | 主程序 v1.1.6+；程序内「内容 / 语言包」一键导入 |
+| 🧩 **DLC-en**（触手 / 品评会 英文稿） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | 同上（需先装 DLC-zh 或用英文界面切换） |
 | ⚠️ legacy（旧调教架构包） | 👉 [v0.1.8 / v0.2.0](https://github.com/indhg/AI-for-Coyote-DLC/releases) | **已过时**，仅适配旧版多档程序；v1.1.6+ 请勿使用 |
 
 主程序（不含本仓库内容）：
@@ -44,40 +44,35 @@
 ## 🧩 内容清单
 
 > 📁 **仓库结构**：仓库根为说明与许可；`releases/` 目录存放当前分发包（与下方 GitHub Releases 资产同一文件，二选一下载即可）。
+> 📌 **2026-09-04 内容收窄**：DLC 仅保留 **触手 / 品评会** 两个正式角色；哥布林 / 史莱姆 / 蛛后已随 v0.4.1 等旧版一并回撤删除，不再提供。
 
 ```
 AI-for-Coyote-DLC/
 ├── README.md                     本说明
 ├── LICENSE                       许可（可分享 · 禁商用）
 └── releases/
-    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   5 正式角色中文稿（= DLC-zh v0.4.1）
-    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   5 正式角色英文稿（= DLC-en v0.4.0）
+    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   触手/品评会 中文稿（= DLC-zh v0.4.2）
+    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   触手/品评会 英文稿（= DLC-en v0.4.1）
 ```
 
 主程序 **v1.1.6+ 已内置**纯爱体验版（触手 · 纯爱向，中英双语，开箱即玩），**无需安装本仓库任何内容**。
 
-本仓库提供的是 **5 个正式角色稿（R18）**，安装到程序目录后生成：
+本仓库提供的是 **2 个正式角色稿（R18）**，安装到程序目录后生成：
 
 ```
 content/
 └── roles/
     ├── 触手-角色提示词.md         （DLC-zh）
     ├── 品评会-角色提示词.md       （DLC-zh）
-    ├── 哥布林-角色提示词.md       （DLC-zh）
-    ├── 史莱姆-角色提示词.md       （DLC-zh）
-    ├── 蛛后-角色提示词.md         （DLC-zh）
     ├── 触手-角色提示词-EN.md      （DLC-en）
-    ├── 品评会-角色提示词-EN.md    （DLC-en）
-    ├── 哥布林-角色提示词-EN.md    （DLC-en）
-    ├── 史莱姆-角色提示词-EN.md    （DLC-en）
-    └── 蛛后-角色提示词-EN.md      （DLC-en）
+    └── 品评会-角色提示词-EN.md    （DLC-en）
 ```
 
 | 内容 | 分发形态 | 语言 |
 |---|---|---|
 | 体验版（触手 · 纯爱向） | ✅ 随主程序内置（content/pure），本仓库不含 | 中文 + 英文 |
-| 触手 / 品评会 / 哥布林 / 史莱姆 / 蛛后（正式角色稿） | DLC-zh（v0.4.1） | 中文 |
-| 上述角色英文稿 | DLC-en（v0.4.0） | 英文 |
+| 触手 / 品评会（正式角色稿） | DLC-zh（v0.4.2） | 中文 |
+| 上述角色英文稿 | DLC-en（v0.4.1） | 英文 |
 
 ---
 
@@ -116,8 +111,8 @@ content/
 
 | Content | Download | Notes |
 |---|---|---|
-| 🧩 **DLC-zh**（5 official roles, Chinese） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | Requires main app v1.1.6+; import in-app via “Content / language packs” |
-| 🧩 **DLC-en**（5 official roles, English） | 👉 [v0.4.0](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.0) | Same (install DLC-zh first or switch UI to EN) |
+| 🧩 **DLC-zh**（Tentacle / Appraisal, Chinese） | 👉 [v0.4.2](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.2) | Requires main app v1.1.6+; import in-app via “Content / language packs” |
+| 🧩 **DLC-en**（Tentacle / Appraisal, English） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | Same (install DLC-zh first or switch UI to EN) |
 | ⚠️ legacy（old multi-tier packs） | 👉 [v0.1.8 / v0.2.0](https://github.com/indhg/AI-for-Coyote-DLC/releases) | **Outdated** — old multi-tier UI only; do not use on v1.1.6+ |
 
 Main app (does not include this repo's content):
@@ -130,40 +125,35 @@ Main app (does not include this repo's content):
 ## 🧩 Content
 
 > 📁 **Repo layout**: the repo root holds docs & license only; the `releases/` folder holds the current packs (same files as the GitHub Releases assets below — grab them from either place).
+> 📌 **2026-09-04 scope narrowed**: DLC now ships only two official roles — **Tentacle / Appraisal**. Goblin / Slime / Arachne were withdrawn with the old v0.4.1-era releases and are no longer provided.
 
 ```
 AI-for-Coyote-DLC/
 ├── README.md                     This file
 ├── LICENSE                       License (Free-Share, Non-Commercial)
 └── releases/
-    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   5 official roles, Chinese (= DLC-zh v0.4.1)
-    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   5 official roles, English (= DLC-en v0.4.0)
+    ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   Tentacle/Appraisal, Chinese (= DLC-zh v0.4.2)
+    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   Tentacle/Appraisal, English (= DLC-en v0.4.1)
 ```
 
 The main app **v1.1.6+ ships the Trial version built in**（Tentacle pure-love sample, ZH + EN, ready to play）— nothing from this repo is required to start.
 
-This repo provides **5 official character scripts (R18)**. After install (content/ merged into the app dir):
+This repo provides **2 official character scripts (R18)**. After install (content/ merged into the app dir):
 
 ```
 content/
 └── roles/
     ├── 触手-角色提示词.md          (DLC-zh)
     ├── 品评会-角色提示词.md        (DLC-zh)
-    ├── 哥布林-角色提示词.md        (DLC-zh)
-    ├── 史莱姆-角色提示词.md        (DLC-zh)
-    ├── 蛛后-角色提示词.md          (DLC-zh)
     ├── 触手-角色提示词-EN.md       (DLC-en)
-    ├── 品评会-角色提示词-EN.md     (DLC-en)
-    ├── 哥布林-角色提示词-EN.md     (DLC-en)
-    ├── 史莱姆-角色提示词-EN.md     (DLC-en)
-    └── 蛛后-角色提示词-EN.md       (DLC-en)
+    └── 品评会-角色提示词-EN.md     (DLC-en)
 ```
 
 | Content | Distribution | Language |
 |---|---|---|
 | Trial（Tentacle pure-love sample） | ✅ Built into the main app（content/pure）— not in this repo | Chinese + English |
-| 5 official characters | DLC-zh（v0.4.1） | Chinese |
-| English scripts of the above | DLC-en（v0.4.0） | English |
+| Tentacle / Appraisal（official roles） | DLC-zh（v0.4.2） | Chinese |
+| English scripts of the above | DLC-en（v0.4.1） | English |
 
 ## 📥 Installation (main app v1.1.6+)
 
