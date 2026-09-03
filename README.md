@@ -1,121 +1,165 @@
 <a id="top"></a>
 
 <div align="center">
-  <h1>🧪 AI for Coyote · DLC</h1>
-  <p>AI 角色扮演内容包系列</p>
-  <p><a href="#中文">中文</a> · <a href="#english">English</a></p>
+
+<h1>Coyote in Cradle · DLC</h1>
+<p><strong>AI 角色扮演 × 郊狼（DG-Lab）—— 正式角色内容包（R18，自行导入）</strong></p>
+
+<p>
+  <a href="https://github.com/indhg/AI-for-Coyote-DLC/releases/latest"><img alt="Release" src="https://img.shields.io/badge/下载-内容包-orange?style=flat-square&logo=download"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-非商用·可分享-green?style=flat-square"></a>
+</p>
+
+<p>
+  <a href="#中文">中文</a> · <a href="#english">English</a>
+</p>
+
+<p><sub>18+ · 成人向 · 请在自愿、知情、同意的前提下使用</sub></p>
+
 </div>
+
+---
 
 <a id="中文"></a>
 
-## 中文
+## 🇨🇳 中文
 
-> ⚠️ **成人内容（18+）**：本仓库包含露骨的成人虚构文本，仅供成年人、双方自愿的虚构角色扮演使用。请遵守所在地区法律。
+## ⬇️ 下载导航
 
-## ⬇️ 下载安装包（PC／安卓）
+| 内容 | 下载 | 说明 |
+|---|---|---|
+| 🧩 **DLC-zh**（5 正式角色中文稿） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | 主程序 v1.1.6+；程序内「内容 / 语言包」一键导入 |
+| 🧩 **DLC-en**（5 正式角色英文稿） | 👉 [v0.4.0](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.0) | 同上（需先装 DLC-zh 或用英文界面切换） |
+| ⚠️ legacy（旧调教架构包） | 👉 [v0.1.8 / v0.2.0](https://github.com/indhg/AI-for-Coyote-DLC/releases) | **已过时**，仅适配旧版多档程序；v1.1.6+ 请勿使用 |
 
-下载请点这里喵：
+主程序（不含本仓库内容）：
 
-👉 <https://github.com/indhg/AI-for-Coyote-DLC/releases/latest>
-
-**本项目完全免费开源（GPL-3.0），任何收费渠道均为盗版。** 作者推特主页欢迎来支持喵～<https://x.com/cinnanirch>
-
-## 📦 相关仓库
-
-本仓库是 **DLC 拓展仓库**，配套主仓库如下：
-
-| 仓库 | 地址 |
+| 端 | 下载 |
 |---|---|
-| 🖥️ **PC 主仓库** | [indhg/AI-for-Coyote](https://github.com/indhg/AI-for-Coyote) |
-| 📱 **安卓端** | [indhg/Coyote-in-Cradle-Android](https://github.com/indhg/Coyote-in-Cradle-Android) |
+| 🖥️ **PC（Windows）** | 👉 <https://github.com/indhg/AI-for-Coyote/releases/latest> |
+| 📱 **安卓（Android）** | 👉 <https://github.com/indhg/Coyote-in-Cradle-Android/releases/latest> |
 
-## 🗂️ 目录规范
+---
 
-每个 DLC 使用一个子目录，命名为 `DLC<序号>-<角色>-<风格>`；文件使用「角色名-」前缀：
+## 🧩 内容清单
 
-- `DLC1-触手-调教版/` —— 黑暗调教·支配胁迫（档位：调教·中）
-- `DLC2-品评会-调教/` —— 公开审评·装置支配·围观施压（档位：调教·中）
+主程序 **v1.1.6+ 已内置**纯爱体验版（触手 · 纯爱向，中英双语，开箱即玩），**无需安装本仓库任何内容**。
 
-## 📥 安装
+本仓库提供的是 **5 个正式角色稿（R18）**，安装到程序目录后生成：
 
-### 🖥️ PC 桌面版（推荐：程序内一键导入）
+```
+content/
+└── roles/
+    ├── 触手-角色提示词.md         （DLC-zh）
+    ├── 品评会-角色提示词.md       （DLC-zh）
+    ├── 哥布林-角色提示词.md       （DLC-zh）
+    ├── 史莱姆-角色提示词.md       （DLC-zh）
+    ├── 蛛后-角色提示词.md         （DLC-zh）
+    ├── 触手-角色提示词-EN.md      （DLC-en）
+    ├── 品评会-角色提示词-EN.md    （DLC-en）
+    ├── 哥布林-角色提示词-EN.md    （DLC-en）
+    ├── 史莱姆-角色提示词-EN.md    （DLC-en）
+    └── 蛛后-角色提示词-EN.md      （DLC-en）
+```
 
-1. 到本仓库 [Release](https://github.com/indhg/AI-for-Coyote-DLC/releases/latest) 下载 `Coyote-in-Cradle-DLC1.zip`（触手·调教）和／或 `Coyote-in-Cradle-DLC2.zip`（品评会·调教）；
-2. 打开主程序 →窗口左侧「角色设置」→「导入 DLC」→选择刚下载的 zip（可多选／多次导入）；
-3. 导入完成即自动启用，切换「调教」档或「品评会」主题就能使用——不用动文件，也不用重启。
+| 内容 | 分发形态 | 语言 |
+|---|---|---|
+| 体验版（触手 · 纯爱向） | ✅ 随主程序内置（content/pure），本仓库不含 | 中文 + 英文 |
+| 触手 / 品评会 / 哥布林 / 史莱姆 / 蛛后（正式角色稿） | DLC-zh（v0.4.1） | 中文 |
+| 上述角色英文稿 | DLC-en（v0.4.0） | 英文 |
 
-> **手动方式（备用）**：解压出 `DLC1-触手-调教版` 目录，放进主程序 `content\pack\`，再在 `config\character.yaml` 的 `调教：` 段启用：
->
-> ```yaml
-> 调教：
->   prompt_file: content/pack/DLC1-触手-调教版/触手-角色提示词-调教.md
-> ```
+---
 
-### 📱 安卓 App
+## 📥 安装（主程序 v1.1.6+）
 
-1. 到本仓库 Release 下载 `Coyote-in-Cradle-DLC1.zip`／`Coyote-in-Cradle-DLC2.zip`（或对应的单个 `.md`）；
-2. App 设置页 →主题卡 →「导入 DLC（打开文件管理）」→勾选一个或多个 zip／md →确定；
-3. 导入成功后，对应主题／档位即点亮，切换即可使用。也可以在文件管理器／浏览器里把 zip 或 md「分享」给本 App，直接导入。
+1. 下载对应 zip（见上方下载导航）；
+2. 打开主程序 → 侧边栏底部 **「内容 / 语言包」→ 选择 zip 并安装**，自动合并进 `content/` 即时生效；
+3. 或手动解压，把 zip 内 `content/…` 合并到程序目录的 `content/` 后重启。
 
-## ⚠️ 免责声明
+安装完成后，角色入口（顶部角色卡 → 点击换入口）出现对应角色；**未导入的角色入口显示灰显「未导入」，导入后恢复正常**。
 
-仅供成年用户自愿、知情、同意的前提下使用。使用本内容造成的任何后果由使用者自行承担，作者不承担任何责任。
+> 旧版主程序（v1.1.5 及更早）为多档架构，请使用 legacy 包（v0.1.8 / v0.2.0）；v1.1.6 起本仓库只维护 v0.4.x 结构。
+
+---
+
+## 📜 许可证
+
+本仓库内容采用 **「可分享 · 禁商用」许可**（见 [LICENSE](LICENSE)）：允许免费转发分享与个人使用（保留许可声明与作者署名），**禁止任何盈利目的的分发、转售与收费**；商用授权请联系作者。
+
+---
+
+## 🙏 致谢与联系
+
+- 反馈 / 建议 / 报错 → 主仓库 [issues](https://github.com/indhg/AI-for-Coyote/issues)
+- 作者：<https://x.com/cinnanirch>
 
 [回到顶部](#top)
 
+---
+
 <a id="english"></a>
 
-## English
+## 🇬🇧 English
 
-> ⚠️ **Adult content（18+）**: This repository contains explicit fictional adult text. It is intended only for adults and consensual fictional role-playing between consenting participants. Please follow the laws in your region.
+## ⬇️ Downloads
 
-## ⬇️ Download（PC／Android）
+| Content | Download | Notes |
+|---|---|---|
+| 🧩 **DLC-zh**（5 official roles, Chinese） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | Requires main app v1.1.6+; import in-app via “Content / language packs” |
+| 🧩 **DLC-en**（5 official roles, English） | 👉 [v0.4.0](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.0) | Same (install DLC-zh first or switch UI to EN) |
+| ⚠️ legacy（old multi-tier packs） | 👉 [v0.1.8 / v0.2.0](https://github.com/indhg/AI-for-Coyote-DLC/releases) | **Outdated** — old multi-tier UI only; do not use on v1.1.6+ |
 
-Download the latest content packages here:
+Main app (does not include this repo's content):
 
-👉 <https://github.com/indhg/AI-for-Coyote-DLC/releases/latest>
-
-**This project is completely free and open source（GPL-3.0）. Any paid distribution channel is piracy.** You are welcome to support the author on Twitter: <https://x.com/cinnanirch>
-
-## 📦 Related repositories
-
-This repository is the **DLC expansion repository**, paired with the following main repositories:
-
-| Repository | Link |
+| Platform | Download |
 |---|---|
-| 🖥️ **PC repository** | [indhg/AI-for-Coyote](https://github.com/indhg/AI-for-Coyote) |
-| 📱 **Android client** | [indhg/Coyote-in-Cradle-Android](https://github.com/indhg/Coyote-in-Cradle-Android) |
+| 🖥️ **PC (Windows)** | 👉 <https://github.com/indhg/AI-for-Coyote/releases/latest> |
+| 📱 **Android** | 👉 <https://github.com/indhg/Coyote-in-Cradle-Android/releases/latest> |
 
-## 🗂️ Directory convention
+## 🧩 Content
 
-Each DLC uses one subdirectory named `DLC<index>-<character>-<style>`, and its files use the “character name-” prefix:
+The main app **v1.1.6+ ships the Trial version built in**（Tentacle pure-love sample, ZH + EN, ready to play）— nothing from this repo is required to start.
 
-- `DLC1-触手-调教版/` — dark training · domination and coercion（tier: Training · medium）
-- `DLC2-品评会-调教/` — public appraisal · device domination · crowd pressure（tier: Training · medium）
+This repo provides **5 official character scripts (R18)**. After install (content/ merged into the app dir):
 
-## 📥 Installation
+```
+content/
+└── roles/
+    ├── 触手-角色提示词.md          (DLC-zh)
+    ├── 品评会-角色提示词.md        (DLC-zh)
+    ├── 哥布林-角色提示词.md        (DLC-zh)
+    ├── 史莱姆-角色提示词.md        (DLC-zh)
+    ├── 蛛后-角色提示词.md          (DLC-zh)
+    ├── 触手-角色提示词-EN.md       (DLC-en)
+    ├── 品评会-角色提示词-EN.md     (DLC-en)
+    ├── 哥布林-角色提示词-EN.md     (DLC-en)
+    ├── 史莱姆-角色提示词-EN.md     (DLC-en)
+    └── 蛛后-角色提示词-EN.md       (DLC-en)
+```
 
-### 🖥️ PC desktop（recommended: one-click import inside the program）
+| Content | Distribution | Language |
+|---|---|---|
+| Trial（Tentacle pure-love sample） | ✅ Built into the main app（content/pure）— not in this repo | Chinese + English |
+| 5 official characters | DLC-zh（v0.4.1） | Chinese |
+| English scripts of the above | DLC-en（v0.4.0） | English |
 
-1. From this repository’s [Release page](https://github.com/indhg/AI-for-Coyote-DLC/releases/latest), download `Coyote-in-Cradle-DLC1.zip`（Tentacles · Training）and／or `Coyote-in-Cradle-DLC2.zip`（Appraisal Event · Training）.
-2. Open the main program →left-side “Character Settings” →“Import DLC” →select the downloaded zip（multiple selections and repeated imports are supported）.
-3. The import is enabled automatically. Switch to the “Training” tier or the “Appraisal Event” theme to use it—no file management and no restart required.
+## 📥 Installation (main app v1.1.6+)
 
-> **Manual method（备用）**: extract the `DLC1-触手-调教版` directory into the main program’s `content\pack\`, then enable the `prompt_file` in the `调教：` section of `config\character.yaml`:
->
-> ```yaml
-> 调教：
->   prompt_file: content/pack/DLC1-触手-调教版/触手-角色提示词-调教.md
-> ```
+1. Download the zip you need (see above);
+2. Open the app → sidebar footer **“Content / language packs” → pick the zip and install** — files are merged into `content/` and take effect immediately;
+3. Or unzip manually and merge the `content/…` folder into the app's `content/`, then restart.
 
-### 📱 Android app
+After install the roles appear in the role selector (top role card → switch entry); **unimported entries are greyed out with a “Not installed” badge until imported**.
 
-1. From this repository’s Release page, download `Coyote-in-Cradle-DLC1.zip`／`Coyote-in-Cradle-DLC2.zip`（or the corresponding single `.md` file）.
-2. In the app, open Settings →a theme card →“Import DLC（Open File Manager）” →select one or more zip／md files →confirm.
-3. After a successful import, the corresponding theme／tier lights up and can be selected. You can also share a zip or md file to this app from a file manager or browser to import it directly.
+> Older main app (≤ v1.1.5) used a multi-tier UI — use the legacy packs (v0.1.8 / v0.2.0). From v1.1.6 this repo only maintains the v0.4.x layout.
 
-## ⚠️ Disclaimer
+## 📜 License
 
-For adults only, under voluntary, informed, and consensual conditions. Users bear all consequences resulting from use of this content; the author assumes no responsibility.
+This repository's content is under a **“Free-Share, Non-Commercial” license** (see [LICENSE](LICENSE)): free sharing and personal use are allowed (keep this notice and the author credit); **any profit-driven distribution, resale or paid hosting is prohibited**. Commercial licensing — contact the author.
+
+## 🙏 Thanks & contact
+
+- Feedback / issues → main repo [issues](https://github.com/indhg/AI-for-Coyote/issues)
+- Author: <https://x.com/cinnanirch>
 
 [Back to top](#top)
