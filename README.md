@@ -7,7 +7,7 @@
 
 <p>
   <a href="https://github.com/indhg/AI-for-Coyote-DLC/releases/latest"><img alt="Release" src="https://img.shields.io/badge/下载-内容包-orange?style=flat-square&logo=download"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-非商用·可分享-green?style=flat-square"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-green?style=flat-square"></a>
 </p>
 
 <p>
@@ -30,6 +30,7 @@
 |---|---|---|
 | 🧩 **DLC-zh**（触手 / 品评会 中文稿） | 👉 [v0.4.2](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.2) | 主程序 v1.1.6+；程序内「内容 / 语言包」一键导入 |
 | 🧩 **DLC-en**（触手 / 品评会 英文稿） | 👉 [v0.4.1](https://github.com/indhg/AI-for-Coyote-DLC/releases/tag/v0.4.1) | 同上（需先装 DLC-zh 或用英文界面切换） |
+| 🗺️ **紫金地牢 demo**（剧情包） | 👉 `releases/Coyote-in-Cradle-DLC-zijin-demo.zip` | 导入后生成 `content/pack/dungeon/zijin/`；需主程序含 dungeon_v2 |
 | ⚠️ legacy（旧调教架构包） | 👉 [v0.1.8 / v0.2.0](https://github.com/indhg/AI-for-Coyote-DLC/releases) | **已过时**，仅适配旧版多档程序；v1.1.6+ 请勿使用 |
 
 主程序（不含本仓库内容）：
@@ -52,7 +53,8 @@ AI-for-Coyote-DLC/
 ├── LICENSE                       许可（可分享 · 禁商用）
 └── releases/
     ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   触手/品评会 中文稿（= DLC-zh v0.4.2）
-    └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   触手/品评会 英文稿（= DLC-en v0.4.1）
+    ├── Coyote-in-Cradle-DLC-en-v1.1.6.zip   触手/品评会 英文稿（= DLC-en v0.4.1）
+    └── Coyote-in-Cradle-DLC-zijin-demo.zip  紫金地牢 demo 剧情包（content/pack/dungeon/zijin）
 ```
 
 主程序 **v1.1.6+ 已内置**纯爱体验版（触手 · 纯爱向，中英双语，开箱即玩），**无需安装本仓库任何内容**。
