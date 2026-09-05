@@ -45,12 +45,12 @@
 ## 🧩 内容清单
 
 > 📁 **仓库结构**：仓库根为说明与许可；`releases/` 目录存放当前分发包（与下方 GitHub Releases 资产同一文件，二选一下载即可）。
-> 📌 **2026-09-04 内容收窄**：DLC 仅保留 **触手 / 品评会** 两个正式角色；哥布林 / 史莱姆 / 蛛后已随 v0.4.1 等旧版一并回撤删除，不再提供。
+> 📌 **角色**：当前正式角色仅 **触手 / 品评会**（哥布林 / 史莱姆 / 蛛后已回撤）。**地牢**：另发 `Coyote-in-Cradle-DLC-zijin-demo.zip`（紫金地牢 demo 剧情包）。
 
 ```
 AI-for-Coyote-DLC/
 ├── README.md                     本说明
-├── LICENSE                       许可（可分享 · 禁商用）
+├── LICENSE                       许可（CC BY-NC 4.0）
 └── releases/
     ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   触手/品评会 中文稿（= DLC-zh v0.4.2）
     ├── Coyote-in-Cradle-DLC-en-v1.1.6.zip   触手/品评会 英文稿（= DLC-en v0.4.1）
@@ -63,11 +63,15 @@ AI-for-Coyote-DLC/
 
 ```
 content/
-└── roles/
-    ├── 触手-角色提示词.md         （DLC-zh）
-    ├── 品评会-角色提示词.md       （DLC-zh）
-    ├── 触手-角色提示词-EN.md      （DLC-en）
-    └── 品评会-角色提示词-EN.md    （DLC-en）
+├── roles/                         （角色 DLC）
+│   ├── 触手-角色提示词.md
+│   ├── 品评会-角色提示词.md
+│   ├── 触手-角色提示词-EN.md
+│   └── 品评会-角色提示词-EN.md
+└── pack/dungeon/zijin/            （紫金地牢 demo 剧情包）
+    ├── manifest.json
+    ├── theme.json
+    └── events/…
 ```
 
 | 内容 | 分发形态 | 语言 |
@@ -75,6 +79,7 @@ content/
 | 体验版（触手 · 纯爱向） | ✅ 随主程序内置（content/pure），本仓库不含 | 中文 + 英文 |
 | 触手 / 品评会（正式角色稿） | DLC-zh（v0.4.2） | 中文 |
 | 上述角色英文稿 | DLC-en（v0.4.1） | 英文 |
+| 紫金地牢 demo（剧情包） | `Coyote-in-Cradle-DLC-zijin-demo.zip` | 中文 |
 
 ---
 
@@ -92,7 +97,7 @@ content/
 
 ## 📜 许可证
 
-本仓库内容采用 **「可分享 · 禁商用」许可**（见 [LICENSE](LICENSE)）：允许免费转发分享与个人使用（保留许可声明与作者署名），**禁止任何盈利目的的分发、转售与收费**；商用授权请联系作者。
+本仓库内容采用 **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**（见 [LICENSE](LICENSE)）：可免费使用、修改与分享，**须署名**，**禁止商业性使用**。
 
 ---
 
@@ -132,7 +137,7 @@ Main app (does not include this repo's content):
 ```
 AI-for-Coyote-DLC/
 ├── README.md                     This file
-├── LICENSE                       License (Free-Share, Non-Commercial)
+├── LICENSE                       License (CC BY-NC 4.0)
 └── releases/
     ├── Coyote-in-Cradle-DLC-zh-v1.1.6.zip   Tentacle/Appraisal, Chinese (= DLC-zh v0.4.2)
     └── Coyote-in-Cradle-DLC-en-v1.1.6.zip   Tentacle/Appraisal, English (= DLC-en v0.4.1)
@@ -169,7 +174,7 @@ After install the roles appear in the role selector (top role card → switch en
 
 ## 📜 License
 
-This repository's content is under a **“Free-Share, Non-Commercial” license** (see [LICENSE](LICENSE)): free sharing and personal use are allowed (keep this notice and the author credit); **any profit-driven distribution, resale or paid hosting is prohibited**. Commercial licensing — contact the author.
+This repository's content is under a **“CC BY-NC 4.0” license** (see [LICENSE](LICENSE)): free sharing and personal use are allowed (keep this notice and the author credit); **any profit-driven distribution, resale or paid hosting is prohibited**. Commercial licensing — contact the author.
 
 ## 🙏 Thanks & contact
 
